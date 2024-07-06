@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import AOS from "aos";
 import Link from "next/link";
+import { TypewriterEffectSmooth } from "./ui/typewriter";
 
 export default function LandingPage() {
   useEffect(() => {
@@ -15,6 +16,29 @@ export default function LandingPage() {
     });
   }, []);
 
+  const words = [
+    {
+      text: "a",
+    },
+    {
+      text: "self",
+    },
+    {
+      text: "taught",
+    },
+    {
+      text: "web",
+      className: "font-bold",
+    },
+    {
+      text: "developer",
+      className: "font-bold",
+    },
+    {
+      text: ".",
+    },
+  ];
+
   return (
     <main className="min-h-screen px-4 max-w-full relative overflow-x-hidden">
       <div className="min-h-screen px-4 max-w-full flex justify-center items-center">
@@ -23,9 +47,10 @@ export default function LandingPage() {
             <h1 className="text-7xl font-bold tracking-tight max-w-max">
               Hej, I'm Fynn
             </h1>
-            <p className="mt-4 text-2xl text-slate-400/50 max-w-max">
-              a self taught web developer.
-            </p>
+            <TypewriterEffectSmooth
+              words={words}
+              className="text-2xl text-slate-400/50"
+            />
 
             <div className="mt-4 flex">
               <Link href={"https://www.linkedin.com/in/fynn-berger-17b209318/"}>
