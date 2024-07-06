@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import AOS from "aos";
 import Link from "next/link";
-import { TypewriterEffectSmooth } from "./ui/typewriter";
+import { LandingTW, TypewriterEffectSmooth } from "./ui/typewriter";
 
 export default function LandingPage() {
   useEffect(() => {
@@ -47,10 +47,7 @@ export default function LandingPage() {
             <h1 className="text-7xl font-bold tracking-tight max-w-max">
               Hej, I'm Fynn
             </h1>
-            <TypewriterEffectSmooth
-              words={words}
-              className="text-2xl text-slate-400/50"
-            />
+            <LandingTW words={words} className="text-2xl text-slate-400/50" />
 
             <div className="mt-4 flex">
               <Link href={"https://www.linkedin.com/in/fynn-berger-17b209318/"}>
