@@ -15,14 +15,14 @@ export default function LandingPage() {
     });
   }, []);
   return (
-    <main className="min-h-screen px-4 py-40 max-w-full overflow-hidden">
+    <main className="min-h-screen px-4 py-40 max-w-full flex justify-center items-center">
       <section className="flex w-full items-center justify-center">
         <div data-aos="fade-up">
           <h1 className="text-7xl font-bold tracking-tight max-w-max">
             Hej, I'm Fynn
           </h1>
           <p className="mt-4 text-2xl text-slate-400/50 max-w-max">
-            a self taught developer.
+            a self taught web developer.
           </p>
 
           <div className="mt-4 flex">
