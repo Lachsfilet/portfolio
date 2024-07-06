@@ -4,6 +4,7 @@ import Image from "next/image";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import AOS from "aos";
+import Link from "next/link";
 
 export default function LandingPage() {
   useEffect(() => {
@@ -21,8 +22,20 @@ export default function LandingPage() {
             Hej, I'm Fynn
           </h1>
           <p className="mt-4 text-2xl text-slate-400/50 max-w-max">
-            Web Developer & <br /> Tech Enthusiast
+            a self taught developer.
           </p>
+
+          <div className="mt-4 flex">
+            <Link href={"https://www.linkedin.com/in/fynn-berger-17b209318/"}>
+              <img
+                src="https://skillicons.dev/icons?i=linkedin"
+                alt="LinkedIn"
+              />
+            </Link>
+            <Link href={"https://github.com/Lachsfilet"} className="ml-2">
+              <img src="https://skillicons.dev/icons?i=github" alt="GitHub" />
+            </Link>
+          </div>
         </div>
 
         <Image
