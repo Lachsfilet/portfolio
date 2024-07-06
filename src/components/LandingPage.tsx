@@ -8,7 +8,7 @@ import Link from "next/link";
 import { LandingTW } from "./ui/typewriter";
 
 export default function LandingPage() {
-  const [socialVisible, setSocialVisible] = useState("hidden");
+  const [socialVisible, setSocialVisible] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -18,8 +18,8 @@ export default function LandingPage() {
     });
 
     setTimeout(() => {
-      setSocialVisible("");
-    }, 4500);
+      setSocialVisible(true);
+    }, 4000);
   }, []);
 
   const words = [
@@ -55,7 +55,11 @@ export default function LandingPage() {
             </h1>
             <LandingTW words={words} className="text-2xl text-slate-400/50" />
 
-            <div className={`mt-4 flex ${socialVisible}`}>
+            <div
+              className={`mt-4 flex ${
+                socialVisible ? "opacity-100" : "opacity-0"
+              } transition-opacity ease-in-out delay-150 duration-300`}
+            >
               <Link href={"https://www.linkedin.com/in/fynn-berger-17b209318/"}>
                 <img
                   src="https://skillicons.dev/icons?i=linkedin"
