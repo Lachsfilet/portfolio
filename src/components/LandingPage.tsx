@@ -2,18 +2,24 @@
 
 import Image from "next/image";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import Link from "next/link";
-import { LandingTW, TypewriterEffectSmooth } from "./ui/typewriter";
+import { LandingTW } from "./ui/typewriter";
 
 export default function LandingPage() {
+  const [socialVisible, setSocialVisible] = useState("hidden");
+
   useEffect(() => {
     AOS.init({
       disable: "phone",
       duration: 800,
       easing: "ease-out-cubic",
     });
+
+    setTimeout(() => {
+      setSocialVisible("");
+    }, 4500);
   }, []);
 
   const words = [
@@ -49,7 +55,7 @@ export default function LandingPage() {
             </h1>
             <LandingTW words={words} className="text-2xl text-slate-400/50" />
 
-            <div className="mt-4 flex">
+            <div className={`mt-4 flex ${socialVisible}`}>
               <Link href={"https://www.linkedin.com/in/fynn-berger-17b209318/"}>
                 <img
                   src="https://skillicons.dev/icons?i=linkedin"
