@@ -46,8 +46,8 @@ export default function LandingPage() {
   ];
 
   return (
-    <main className="min-h-screen px-4 max-w-full relative overflow-x-hidden">
-      <div className="min-h-screen px-4 max-w-full flex justify-center items-center">
+    <main className="min-h-screen max-w-full relative overflow-x-hidden">
+      <div className="min-h-screen max-w-full px-4 flex justify-center items-center">
         <section className="flex flex-col-reverse sm:flex-row w-full items-center justify-center">
           <div data-aos="fade-up">
             <h1 className="text-7xl font-bold tracking-tight max-w-max">
