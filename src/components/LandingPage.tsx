@@ -73,10 +73,10 @@ export default function LandingPage() {
           </div>
 
           <Image
-            src="/pfp.jpg"
+            src="/pfp.png"
             alt="Fynn's Profile Picture"
-            width={250}
-            height={250}
+            width={1000}
+            height={1000}
             layout="intrinsic"
             className="ml-[30vw] object-cover object-center select-none w-52 h-52 md:w-72 md:h-72 rounded-full overflow-hidden"
             loading="eager"
