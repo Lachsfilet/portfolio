@@ -48,7 +48,7 @@ export default function LandingPage() {
   return (
     <main className="min-h-screen px-4 max-w-full relative overflow-x-hidden">
       <div className="min-h-screen px-4 max-w-full flex justify-center items-center">
-        <section className="flex w-full items-center justify-center">
+        <section className="flex flex-col-reverse sm:flex-row w-full items-center justify-center">
           <div data-aos="fade-up">
             <h1 className="text-7xl font-bold tracking-tight max-w-max">
               Hej, I'm Fynn
@@ -78,7 +78,7 @@ export default function LandingPage() {
             width={1000}
             height={1000}
             layout="intrinsic"
-            className="ml-[30vw] object-cover object-center select-none w-52 h-52 md:w-72 md:h-72 rounded-full overflow-hidden"
+            className="md:ml-[30vw] mb-10 md:mb-0 object-cover object-center select-none w-52 h-52 md:w-72 md:h-72 rounded-full overflow-hidden"
             loading="eager"
             priority
             data-aos="fade-left"
